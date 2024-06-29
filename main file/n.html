@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Niranga">
+        <meta name="describetion" content = "This is a free souce that use for CIS students in SUSL">
+        <title>2N Share</title>
+        <link rel="icon" href="logo.png" type = "image/x-icon">
+    <title>2N Share</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .header, .footer {
+            background-color: #239B56;
+            color: white;
+            padding: 15px 0;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer p {
+            margin: 0;
+            text-align: right;
+            padding-right: 10px;
+                                  
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px auto;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .link_section {
+            display: inline-block;
+            margin: 10px auto;
+            background-color: #ff00f7;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: progress;
+            text-decoration: none;
+       
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <section id = "link_section">
+            <a href="https://www.linkedin.com/in/niranga-nayanajith-548a0a302/" class="linkedin-logo">
+                <p><strong>TAP ME</strong></p>
+            </a>
+        </section>
+    </div>
+    
+    <h1>2N Share</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="button">
+        <input type="submit" value="Upload" class="button">
+    </form>
+
+    <h2>Uploaded Files</h2>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('uploaded_file', filename=file) }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+    <div class="footer">
+        <a href = "https://www.linkedin.com/in/niranga-nayanajith-548a0a302/" target = "_blank">
+                                  <p>@2N Technologies</p>
+        </a>
+    </div>
+</body>
+</html>
