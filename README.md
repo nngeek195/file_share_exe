@@ -17,7 +17,7 @@ This is a fully functional python base application. This is a simple altanative 
 - connect your Pc with your mobile phones hostport
 - open the applications
   <img width="71" alt="image" src="https://github.com/user-attachments/assets/deb7fb43-70a7-4bd4-9178-e69ea6843ca6" />
--Then you can see a localhost link
+- Then you can see a localhost link
 <img width="956" alt="image" src="https://github.com/user-attachments/assets/da817033-a8db-4eec-ae76-10a2a314b4ce" />
 
 - Use that address in mobile phone also, then you will able to see a same interface their also
